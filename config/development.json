@@ -1,0 +1,5 @@
+{
+    "name": "Express App- Dev",
+    "morgan": "enabled",
+    "db_password": "password"
+}
