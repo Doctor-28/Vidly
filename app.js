@@ -41,16 +41,6 @@ app.use('/api/genres', genresRouter);
 app.use('/api/customers', customersRouter);
 app.use('/', homeRouter);
 
-// middleware functions are called in sequence
-app.use((req, res, next) => {
-    //console.log('Logging...');
-    next();
-});
-
-app.use((req, res, next) => {
-    //console.log('Authenticating...');
-    next();
-});
 
 const port = process.env.PORT || 9000;
 app.listen(port, () => {
