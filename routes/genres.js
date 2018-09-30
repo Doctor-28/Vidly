@@ -10,7 +10,7 @@ router.get('/', async (req, res) => {
 });
 
 router.get('/:id', async (req, res) => {
-    const genre = genre.findById(req.params.id);
+    const genre = Genre.findById(req.params.id);
     if (!genre)  //404
         return res.status(404).send('Not found.');
 
@@ -22,11 +22,11 @@ router.post('/', async (req, res) => {
     if (error)   //400 Bad Request
         return res.status(400).send(error.details[0].message);
 
-    let genre = new Genre({
+    const genre = new Genre({
         name: req.body.name
     });
 
-    genre = await genre.save();
+    await genre.save();
     res.send(genre);
 });
 
