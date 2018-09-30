@@ -3,6 +3,8 @@ const app = express();
 const genresRouter = require('./routes/genres');
 const homeRouter = require('./routes/home');
 const customersRouter = require('./routes/customers');
+const moviesRouter = require('./routes/movies');
+const rentalsRouter = require('./routes/rentals');
 const config = require('config');
 const debug = require('debug')('app:db'); //debug module creates a logging function that we can call for debug work
 const helmet = require('helmet');
@@ -39,6 +41,8 @@ if (app.get('env') == 'development') {
 
 app.use('/api/genres', genresRouter);
 app.use('/api/customers', customersRouter);
+app.use('/api/movies', moviesRouter);
+app.use('/api/rentals', rentalsRouter);
 app.use('/', homeRouter);
 
 
