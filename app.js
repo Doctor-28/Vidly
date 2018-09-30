@@ -10,6 +10,8 @@ const debug = require('debug')('app:db'); //debug module creates a logging funct
 const helmet = require('helmet');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
+const Joi = require('joi');
+Joi.objectId = require('joi-objectid')(Joi);
 
 const MONGO_PORT = 27017;
 const CONNECTION_STRING = `mongodb://localhost:${MONGO_PORT}/vidly`;

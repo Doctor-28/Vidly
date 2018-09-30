@@ -31,8 +31,8 @@ const Rental = mongoose.model('Rental', rentalSchema);
 
 let validateRental = (rental) => {
     const schema = {
-        customerId: Joi.string().required(),
-        movieId: Joi.string().required(),
+        customerId: Joi.objectId().required(),
+        movieId: Joi.objectId().required(),
         dateOut: Joi.date(),
         dateReturned: Joi.date(),
         rentalFee: Joi.number().required()
