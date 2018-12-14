@@ -11,14 +11,14 @@ router.get('/', async (req, res) => {
     res.send(users);
 });
 
-/* router.get('/:id', async (req, res) => {
+ router.get('/:id', async (req, res) => {
     const user = await User.findById(req.params.id)
     if (!user)
         return res.status(404).send('Not found.');
 
     res.send(user);
 });
- */
+
 router.get('/me',  auth, async (req,res)=>{
     const user = await User.findById(req.user._id).select('-password');
     res.send(user);

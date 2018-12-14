@@ -1,4 +1,3 @@
 {
-    "name": "Express App- Prod",
-    "morgan": "enabled"
+    "name": "Express App- Prod"
 }

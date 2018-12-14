@@ -16,15 +16,15 @@ router.post('/', async (req, res) => {
         return res.status(400).send('User with this email not found')
 
     const validPassword = await bcrypt.compare(req.body.password, user.password)
-    if (!validPassword) 
+    if (!validPassword)
         return res.status(400).send('Invalid password')
-    
-    
+
+
     const token = user.generateAuthToken();
-    res.send(token)
+    res.send({ token: token })
 });
 
-function validateUser (req) {
+function validateUser(req) {
     const schema = {
         email: Joi.string().min(6).max(50).email().required(),
         password: new PasswordComplexity(complexityOptions)

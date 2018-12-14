@@ -3,37 +3,35 @@
   "version": "1.0.0",
   "description": "RESTful Api for Movies Genres",
   "main": "app.js",
+  "dependencies": {
+    "bcrypt": "^3.0.2",
+    "config": "^3.0.0",
+    "debug": "^4.1.0",
+    "express": "^4.16.4",
+    "express-async-errors": "^3.1.1",
+    "fawn": "^2.1.5",
+    "helmet": "^3.15.0",
+    "joi": "^14.3.0",
+    "joi-objectid": "^2.0.0",
+    "joi-password-complexity": "^2.0.1",
+    "jsonwebtoken": "^8.4.0",
+    "lodash": "^4.17.11",
+    "mongoose": "^5.3.16",
+    "winston": "^2.4.0",
+    "winston-mongodb": "^3.0.0"
+  },
+  "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon ./app.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Doctor-28/Vidly.git"
   },
-  "author": "Leonardo Berlatto",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Doctor-28/Vidly/issues"
   },
-  "homepage": "https://github.com/Doctor-28/Vidly#readme",
-  "dependencies": {
-    "bcrypt": "^1.0.3",
-    "config": "^2.0.1",
-    "debug": "^4.0.1",
-    "express": "^4.16.3",
-    "fawn": "^2.1.5",
-    "helmet": "^3.13.0",
-    "joi": "^13.6.0",
-    "joi-objectid": "^2.0.0",
-    "joi-password-complexity": "^2.0.1",
-    "jsonwebtoken": "^8.3.0",
-    "lodash": "^4.17.11",
-    "mongoose": "^5.3.0",
-    "morgan": "^1.9.1",
-    "node-gyp": "^3.8.0",
-    "node-pre-gyp": "^0.11.0",
-    "nodemon": "^1.18.4",
-    "pug": "^2.0.3"
-  }
+  "homepage": "https://github.com/Doctor-28/Vidly#readme"
 }
