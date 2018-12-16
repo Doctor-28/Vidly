@@ -32,7 +32,7 @@ router.post('/', async (req, res) => {
     try {
         const user = await createUser(req.body);
         const token = user.generateAuthToken();
-        res.header('authorization', token);
+        res.header('Authorization', token);
         res.send(_.pick(user, ['name', 'email']));
     } catch (error) {
         res.status(error.httpStatus)
