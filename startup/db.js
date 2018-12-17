@@ -1,13 +1,13 @@
 const mongoose = require('mongoose');
 const winston = require('winston');
+const config = require('config');
 
-module.exports = function() {
-const MONGO_PORT = 27017;
-const CONNECTION_STRING = `mongodb://localhost:${MONGO_PORT}/vidly`;
-const CONFIG = {
-    useNewUrlParser: true
-}
+module.exports = function () {
+    const CONFIG = {
+        useNewUrlParser: true
+    }
 
-mongoose.connect(CONNECTION_STRING, CONFIG)
-    .then(() => winston.info('Connected to MongoDB.'));
+    const db = config.get('db');
+    mongoose.connect(db, CONFIG)
+        .then(() => winston.info(`Connected to ${db}.`));
 }
